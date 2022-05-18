@@ -1,0 +1,8 @@
+[
+  {
+    "id": 1,
+    "title": "asd",
+    "price": "123",
+    "thumbnail": "https://cdn3.iconfinder.com/data/icons/street-food-and-food-trucker-1/64/shrimp-prawn-seafood-animal-marine-512.png"
+  }
+]

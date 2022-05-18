@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head'); %>
+</head>
+<body>
+    <main>
+        <div class="container-fluid">
+            <div class="bg-body shadow-sm p-3 mb-5 bg-body rounded ">
+                <h3>Ingrese productos</h3>
+                <div class="productsForm mb-3 mt-3">
+                    <form id="addProduct">
+                        <div class="form-group mb-3">
+                            <label for="title">Titulo del producto:</label>
+                            <input type="text" class="form-control" id="title" name="title" placeholder="Ingrese el nombre del producto">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="price">Precio del producto:</label>
+                            <input type="number" class="form-control" id="price" name="price" placeholder="Ingrese el precio del producto">
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="thumbnail">Imagen del producto:</label>
+                            <input type="text" class="form-control" id="thumbnail" name="thumbnail" placeholder="Ingrese url de la imagen del producto">
+                        </div>                
+                        <button type="submit" value="Send">Guardar</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="bg-body shadow-sm p-3 mb-5 bg-body rounded ">
+                <h3>Listado de productos</h3>
+                <div class="table-responsive">
+                    <table class="table table-bordered table-sm table-hover table-striped">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Nombre</th>
+                                <th scope="col">Precio</th>
+                                <th scope="col">imagen</th>
+                            </tr>
+                        </thead>
+                        <tbody id="allProducts"></tbody>
+                    </table>
+                </div> 
+            </div>  
+
+            <div class="bg-body shadow-sm p-3 mb-5 bg-body rounded ">
+                <h3>Centro de mensajes</h3>
+                <div id="messages" class="messages"></div>
+                <form id="messageCenter" class="form-inline" autocomplete="off">
+                    <input type="text" id="username" class="form-control my-2 mr-2" placeholder="Tu Nombre">
+                    <input type="text" id="text" class="form-control my-2 mr-2" placeholder="Cuéntanos algo...">
+                    <input class="btn btn-primary my-2" type="submit" value="Enviar!">
+                </form>
+            </div>  
+            
+            <div id="popUpMessages"></div>    
+        </div>        
+    </main>
+
+    <%- include('../partials/scripts') %>
+</body>
+</html>
